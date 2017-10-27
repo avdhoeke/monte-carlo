@@ -1,17 +1,23 @@
 #include <stdio.h>
 #include <random.h>
+#include <kleinNishina.h>
 
 int
 main (void) {
+
+double p;
+double theta;
+double E0;
+
+  E0 = 500;
+  theta = 0;
+
   gsl_rng* r = initialize_random();
+  p =  generate_random(r);
 
-  int i = 0;
-  while(i < 10) {
-    printf("%.5f\n", generate_random(r));
-    i = i + 1;
-  }
+  kleinNishina(p,E0,theta);
 
- deinitialize_random(r);
-
+  deinitialize_random(r);
   return 0;
+
 }

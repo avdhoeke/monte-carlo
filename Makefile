@@ -1,5 +1,5 @@
 ## Fichiers .c a compiler
-SRC = main.c random.c
+SRC = main.c random.c kleinNishina.c afficher.c plot.c
 
 ## Transforme tous les fichiers .c en .o
 OBJ = $(SRC:.c=.o)
